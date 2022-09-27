@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>세금관리 설정</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="Cache-Control" content="no-cache,no-store" />
+
+<meta name="writer" content="">
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="" />
+<meta name="format-detection" content="telephone=no" />
+
+<meta property="og:title" content=""/>
+<meta property="og:type" content=""/>
+<meta property="og:url" content=""/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content=""/>
+
+
+<!-- link -->
+<link href="css/swiper.min.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+<link href="css/added.css" rel="stylesheet">
+
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+
+
+<header id="header" class="header">
+	<div class="inr-c">
+		<button type="button" class="btn-back"><span>뒤로</span></button>
+		<h1 class="tit">세금관리 설정</h1>
+	</div>
+</header><!--//header -->
+
+<div id="container" class="container main">
+
+	<!-- 상단 카드부분 -->
+	<div class="top_card">
+		<div class="inr-c">
+			<div class="top2">
+				<div class="pt10">계정 설정</div>
+				<div class="flex aic">
+				</div>
+			</div>
+		</div>
+	</div>
+			
+	<!-- 내역 -->
+
+<div>
+	<div class="guanri_lst_card flex jcsb aic">
+		<div class="title_text">홈택스계정 설정 </div>
+			<div class="rignt-area flex aic">
+					<a onclick="openLayerPopup2('connect');">
+					<span class="h1 mr20 c-green fw600">연결하기</span>
+					</a>
+					<div class="btns">
+						<button type="button" class="btn_del" onclick="openLayerPopup2('delete');"><span class="ico_ i_del">삭제</span></button>
+					</div>
+			</div>
+	</div>
+	<div class="guanri_lst_card flex jcsb aic">
+		<div class="title_text">공동인증서 설정 </div>
+			<div class="rignt-area flex aic">
+					<span class="mr20">연결완료</span>
+					<div class="btns">
+						<button type="button" class="btn_del" onclick="openLayerPopup2('delete');"><span class="ico_ i_del">삭제</span></button>
+					</div>
+			</div>
+	</div>
+</div>
+
+
+</div><!--//container -->
+
+
+<!-- 팝업 : 삭제 -->
+<div id="delete" class="layerPopup2 pop_alert">
+	<div class="popup">
+		<div class="p_cont2">
+			<p class="t2 mb12"><span class="c-red">삭제</span> 하시겠습니까?</p>
+			<span style="font-size: 13px; font-size: 3.611vw;">삭제 후 재등록이 가능합니다.</span>
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk gray b-close2"><span>아니오</span></button>
+			<button type="button" class="btn-pk red "><span>예</span></button>
+		</div>
+	</div>
+</div>
+
+<!-- 팝업 : 연결 -->
+<div id="connect" class="layerPopup2 pop_alert">
+	<div class="popup">
+		<div class="p_cont2">
+			<p class="t2 mb12"><span class="c-red">홈택스아이디 어쩌구</span> 하시겠습니까?</p>
+			<span style="font-size: 13px; font-size: 3.611vw;">로그인인풋창</span>
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk gray b-close2"><span>아니오</span></button>
+			<button type="button" class="btn-pk red "><span>예</span></button>
+		</div>
+	</div>
+</div>
+
+<!-- 팝업 : 로그인 실패 -->
+<div id="failtologin" class="layerPopup2 pop_alert">
+	<div class="popup">
+		<div class="login_fail_img"><img src="../images/login_fail.svg"></div>
+		<div class="p_cont">
+			<p class="t1 mb20">로그인 실패</p>
+			<p class="tac mb5">연결하시려는 주문플랫폼의</p>
+			<p class="tac">계정을 확인해주세요!</p>
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk gray b-close2"><span>확인</span></button>
+		</div>
+	</div>
+</div>
+
+
+<!-- 메인 js -->
+<script src="js/main.js"></script>
+
+
+</div><!--  //wrap -->
+</body>
+</html>

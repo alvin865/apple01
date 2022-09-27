@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>계좌관리</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="Cache-Control" content="no-cache,no-store" />
+
+<meta name="writer" content="">
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="" />
+<meta name="format-detection" content="telephone=no" />
+
+<meta property="og:title" content=""/>
+<meta property="og:type" content=""/>
+<meta property="og:url" content=""/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content=""/>
+
+
+<!-- link -->
+<link href="css/swiper.min.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+<link href="css/added.css" rel="stylesheet">
+
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+
+
+<header id="header" class="header">
+	<div class="inr-c">
+		<button type="button" class="btn-back"><span>뒤로</span></button>
+		<h1 class="tit">계좌관리</h1>
+	</div>
+</header><!--//header -->
+
+<div id="container" class="container main">
+
+	<!-- 상단 카드부분 -->
+	<div class="top_card">
+		<div class="inr-c">
+			<div class="top4">
+				<div class="mb12 fw800 c-black fs18">사업자입출금 통장</div>
+				<div class="fs11">하나은행 100-1245-2526262</div>
+			</div>
+		</div>
+	</div>
+	<div class="devide-line"></div>
+	
+			
+	<!-- 내역 -->
+	<div class="">
+
+		<a href="">
+		<div class="tongjang_lst_1">
+			<span class="fs15 fw600 c-black">계좌별명</span>
+			<a href="#" class="fs15"><span class="mr10">입출금 통장</span><span class="fw600 c-grbk300">></span></a>
+		</div>
+		</a>
+
+		<a href="">
+		<div class="tongjang_lst_1">
+			<span class="fs15 fw600 c-black">주로 쓰는 계좌</span>
+			<a href="#" class="fs15" onclick="openLayerPopup('jurouse_account'); return false;"><span class="mr10">설정하기</span><span class="fw600 c-grbk300">></span></a>
+		</div>
+		</a>
+
+		<a href="">
+			<div class="tongjang_lst_2">
+				<div>
+				<p><span class="fs15 fw600 c-black">총 계좌 잔액에서 제외하기</span></p>
+				<span class="fs12 c-grbk300">제외하면 금액도 가려져요</span>
+				</div>
+				<div class="toggle-type-2">
+					<input type="checkbox" id="cb1">
+					<label for="cb1">
+							<span class="toggle-track"></span>
+					</label>
+				</div>
+			</div>
+		</a>
+
+		<a href="">
+			<div class="tongjang_lst_2">
+				<div>
+				<p><span class="fs15 fw600 c-black">계좌 숨기기</span></p>
+				<span class="fs12 c-grbk300">목록에서 숨겨져요</span>
+				</div>
+				<div class="toggle-type-2">
+					<input type="checkbox" id="cb2">
+					<label for="cb2">
+							<span class="toggle-track"></span>
+					</label>
+				</div>
+			</div>
+		</a>
+
+		<div class="mb10"></div>
+
+		<div class="devide-line"></div>
+
+		<div class="tongjang_lst_1">
+			<span class="fs10" style="border-bottom: 1px solid;" onclick="openLayerPopup2('dismiss'); return false;">연결 해제하기</span>
+		</div>	
+
+
+	</div>
+
+
+</div><!--//container -->
+
+
+<!-- 팝업 : 해제 -->
+<div id="dismiss" class="layerPopup2 pop_alert">
+	<div class="popup">
+		<div class="p_cont3">
+			<p class="t2 mb12"><span class="mr4">연결을</span><span class="c-red">해제</span> 하시겠습니까?</p>
+			<p><span style="font-size: 13px; font-size: 3.611vw;">연결 해제 후에도</span></p>
+			<span style="font-size: 13px; font-size: 3.611vw;">연제든지 다시 등록 할 수 있습니다.</span>
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk gray b-close2"><span>아니오</span></button>
+			<button type="button" class="btn-pk red "><span>예</span></button>
+		</div>
+	</div>
+</div>
+
+
+<!-- 팝업 : 주로쓰는계좌 -->
+<div id="jurouse_account" class="layerPopup ty2 pop_setting">
+	<div class="popup">
+		<div class="p_head mt20">
+			<h2 class="tit mb12">주로 쓰는 계좌</h2>
+			<p>은행별 1개 계좌만 설정 할 수 있습니다</p>
+			<span>설정시, 은행 별 계좌 리스트 맨 앞에 표시됩니다.</span>
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk gray b-close2"><span>취소</span></button>
+			<button type="button" class="btn-pk red"><span>설정</span></button>
+		</div>
+	</div>
+</div>
+
+<!-- 메인 js -->
+<script src="js/main.js"></script>
+
+
+</div><!--  //wrap -->
+</body>
+</html>

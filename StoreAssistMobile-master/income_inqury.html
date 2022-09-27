@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>매출조회</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="Cache-Control" content="no-cache,no-store" />
+
+<meta name="writer" content="">
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="" />
+<meta name="format-detection" content="telephone=no" />
+
+<meta property="og:title" content=""/>
+<meta property="og:type" content=""/>
+<meta property="og:url" content=""/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content=""/>
+
+
+<!-- link -->
+<link href="css/swiper.min.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+<link href="css/added.css" rel="stylesheet">
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/common.js"></script>
+
+</head>
+<body>
+<div id="wrap">
+
+
+<header id="header" class="header">
+	<div class="inr-c">
+		<button type="button" class="btn-back"><span>뒤로</span></button>
+		<h1 class="tit">매출조회</h1>
+		<a href="./income_inqury_guanri.html" class="btn-gwanri"><span>관리</span></a>
+	</div>
+</header><!--//header -->
+
+<div id="container" class="container main">
+
+	<!-- 상단 카드부분 -->
+	<div class="mt10"></div>
+	<div class="income">
+	<div class="top_card">
+		<div class="wrap inr-c">
+			<div class="top-tab-menu">
+
+				<ul class="top-tab-ul">
+					<li><a href="#" id="tab_all" class="active">전체</a></li>
+					<li><a href="#" id="tab_store_assist" >매장비서</a></li>
+					<li><a href="#" id="tab_baemin" >배달의민족</a></li>
+					<li><a href="#" id="tab_yogiyo">요기요</a></li>
+					<li><a href="#" id="tab_coupang">쿠팡이츠</a></li>
+					<li><a href="#" id="tab_muk">먹깨비</a></li>
+					<li><a href="#" id="tab_spdv">배달특급</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	</div>
+	
+
+	<ul class="tab-menu-box">
+		<li id="tab1">
+
+
+		</li>
+		<li id="tab2">
+ 
+
+		</li>
+		<li id="tab3">
+ 
+
+		</li>
+
+		
+		<div class="pt20 pb25" style="background-color:#FFF4FB;">
+			<div class="top_tit_calendar">
+				<div class="inr-c">
+					<div class="tit_yeas">
+						<button type="button" class="btn_yeas" onclick="openLayerPopup('popYears'); return false;"><span>2022년 9월</span></button>
+						<button type="button" class="btn_prev"><span>이전</span></button>
+						<button type="button" class="btn_next"><span>다음</span></button>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="top_card">
+				<div class="inr-c">
+					<div class="box">
+						<div class="card_contents">
+							<div class="flex aic jcsb mb8">
+								<div class="textbox_mc"><span>매출금액</span></div>
+								<div class="price_text_mc" value="" name="매출금액" id="amt_total">391,000</div>
+							</div>
+						<div class="flex aic jcsb mb12">
+							<div class="textbox_bc"><span>정산금액</span></div>
+								<div class="price_text_bc" value="" name="정산금액" id="paid_amt_total">391,000</div>
+						</div>
+						<div class="flex aic jcsb">
+							<span>총 건수</span>
+							<span id="tot_cnt">31건</span>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		
+		<!-- 내역 -->
+		<div class="tit_calendar">
+			<div class="inr-c">
+				<div class="txt_btn">
+					<button type="button" class="btn_tx" id="btn_refresh"><span class="ico_ i_refresh">총 <span class="c-red" id="tot_cnt2">51</span>건</span></button>
+					<div class="rgh">
+						<button type="button" class="btn_tx" onclick="openLayerPopup('popSetting'); return false;"><span class="ico_ i_sort">전체·최신순</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="lst_card">
+			<ul id="list_main">
+				<li>
+					<p class="t_day">5월 15일</p>
+					<div class="l_card"><a href="javascript:;" onclick="prdView3(this);"><!-- 선택시 active-->
+						<p class="t1">
+							<span class="lft fw600 c-black">배달의민족</span>
+							<span class="rgh fw800 c-red">22,400원</span>
+						</p>
+						<p class="t0">
+							<span class="lft"><span>입금예정일</span></span>
+							<span class="rgh">2022-05-05</span>
+						</p>
+						<p class="t2">
+							<span class="lft"><span>정산금</span></span>
+							<span class="rgh c-black fw600">52,000원</span>
+							</span>
+						</p>
+					</a></div>
+
+					<div class="l_card"><a href="javascript:;" onclick="prdView3(this);"><!-- 선택시 active-->
+						<p class="t1">
+							<span class="lft fw600 c-black">요기요</span>
+							<span class="rgh fw800 c-red">22,400원</span>
+						</p>
+						<p class="t0">
+							<span class="lft"><span>입금예정일</span></span> 
+							<span class="rgh">2022-05-05</span>
+						</p>
+						<p class="t2">
+							<span class="lft"><span>정산금</span></span>
+							<span class="rgh c-black fw600">52,000원</span>
+							</span>
+						</p>
+					</a></div>
+
+					<div class="l_card"><a href="javascript:;" onclick="prdView(this);"><!-- 선택시 active-->
+						<p class="t1">
+							<span class="lft fw600 c-black">매장비서</span>
+							<span class="rgh fw800 c-red">22,400원</span>
+						</p>
+						<p class="t0">
+							<span class="lft"><span>입금예정일</span></span>
+							<span class="rgh">-</span>
+						</p>
+						<p class="t2">
+							<span class="lft"><span>정산금</span></span>
+							<span class="rgh c-black fw600">-</span>
+							</span>
+						</p>
+					</a></div>
+
+			</ul>
+		</div>
+
+	</ul>
+
+
+</div><!--//container -->
+
+
+
+
+<!-- 팝업 : 상세내역 -->
+<div id="popView" class="layerPopup ty1 pop_view">
+	<div class="popup">
+		<div class="p_head">
+			<h2 class="tit">결제 상세내역</h2>
+			<button type="button" class="b-close btn_p_close"><span>닫기</span></button>
+		</div>
+
+		<div class="p_cont">
+			<div class="flex jcsb tat">
+			<h2 class="tit1">매장비서</h2><!---매장비서,먹깨비,배달특급등 (웹크롤링하지 않는 주문경로)-->
+			<div class="btns">
+				<button type="button" class="btn_del" onclick="openLayerPopup2('delete2');"><span class="ico_ i_del">삭제</span></button>
+			</div>
+		</div>
+
+			<div class="card_ptop">
+				<div class="lft">
+					<p class="t1"><strong class="c-red">51,000원</strong><!-- <strong class="c-black">51,000원</strong> --></p>
+				</div>
+				<div class="rgh">
+					<p><span style="font-weight: 500; color:#FF6093" onclick="openLayerPopup4('incomemoneyedit');">판매금 수정하기 ></span></p><!-- <p class="c-green">입금완료</p> -->
+				</div>
+			</div>
+			<div class="card_plist">
+				<ul>
+					<li>
+						<p><span>주문일시</span><span>2022-08-05 15:25:20</span></p>
+						<p><span>메뉴</span><span class="textoverflow">치ddddddddddddddddddd킨맛집랭킹 1위 후라이드치킨1000</span></p>
+						<p><span>판매금</span><span>47,000원</span></p>
+					</li>
+					<li>
+						<p><span>매장명</span><span>#탕화쿵푸건대점</span></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- //팝업 : 상세내역2(웹크롤링데이터 배민요기요쿠팡이츠) -->
+<div id="crawling_popView" class="layerPopup ty1 pop_view">
+	<div class="popup">
+		<div class="p_head">
+			<h2 class="tit">결제 상세내역</h2>
+			<button type="button" class="b-close btn_p_close"><span>닫기</span></button>
+		</div>
+
+		<div class="p_cont">
+			<div class="flex jcsb tat">
+			<h2 class="tit1" id="pop_app_name">배달의민족</h2><!--- *배민,요기요,쿠팡이츠 등 웹크롤링하는 배달앱(삭제 및 수정하기버튼이 없음)-->
+		</div>
+
+			<div class="card_ptop">
+				<div class="lft">
+					<p class="t1"><strong class="c-red" id="pop_amt">51,000원</strong><!-- <strong class="c-black">51,000원</strong> --></p>
+				</div>
+			</div>
+			<div class="card_plist">
+				<ul>
+					<li>
+						<p><span>주문일시</span><span id="pop_order_dt">2022-08-05 15:25:20</span></p>
+						<p><span>메뉴</span><span class="textoverflow" id="pop_menu">치ddddddddddddddddddd킨맛집랭킹 1위 후라이드치킨1000</span></p>
+						<p><span>판매금</span><span id="pop_amt2">47,000원</span></p>
+						<p><span>정산금</span><span id="pop_paid_amt">57,500원</span></p>
+						<p><span>입금예정일</span><span id="pop_in_due_dt">2022-08-05</span></p>
+					</li>
+					<li>
+						<p><span>매장명</span><span id="pop_store_nm">#탕화쿵푸건대점</span></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- 팝업 : 삭제1 -->
+<div id="delete" class="layerPopup2 pop_alert">
+	<div class="popup">
+		<div class="p_cont2">
+			<p class="t2 mb12"><span class="c-red">삭제</span> 하시겠습니까?</p>
+			<span style="font-size: 13px; font-size: 3.611vw;">삭제 후 재등록이 가능합니다.</span>
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk gray b-close2"><span>아니오</span></button>
+			<button type="button" class="btn-pk red "><span>예</span></button>
+		</div>
+	</div>
+</div>
+
+<!-- 팝업 : 삭제2 -->
+<div id="delete2" class="layerPopup2 pop_alert">
+	<div class="popup">
+		<div class="p_cont2">
+			<p class="t2 mb12"><span class="c-red">삭제</span> 하시겠습니까?</p>
+			<span style="font-size: 13px; font-size: 3.611vw;">삭제시 해당내용을 복구하실 수 없습니다.</span>
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk gray b-close2"><span>아니오</span></button>
+			<button type="button" class="btn-pk red "><span>예</span></button>
+		</div>
+	</div>
+</div>
+
+
+<!-- 팝업 : 로그인 실패 -->
+<div id="failtologin" class="layerPopup2 pop_alert">
+	<div class="popup">
+		<div class="login_fail_img"><img src="../images/login_fail.svg"></div>
+		<div class="p_cont">
+			<p class="t1 mb20">로그인 실패</p>
+			<p class="tac mb5">연결하시려는 주문플랫폼의</p>
+			<p class="tac">계정을 확인해주세요!</p>
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk gray b-close2"><span>확인</span></button>
+		</div>
+	</div>
+</div>
+			
+
+<!-- 팝업 : 년월선택 -->
+<div id="popYears" class="layerPopup ty2 pop_years">
+	<div class="popup">
+		<div class="p_head">
+			<h2 class="tit">조회기간 선택</h2>
+			<button type="button" class="b-close btn_p_close"><span>닫기</span></button>
+		</div>
+
+		<div class="p_cont  pt10 pb10">
+
+			<div class="d-flex">
+				<div class="lst_swiper swiper1">
+					<div class="lst_line swiper-wrapper">
+						<div class="swiper-slide"><a href="javascript:;">2021</a></div>
+						<div class="swiper-slide current"><a href="javascript:;">2022</a></div><!-- 현재 연도에 current 추가 -->
+						<div class="swiper-slide"><a href="javascript:;">2023</a></div>
+					</div>
+				</div>
+
+				<div class="lst_swiper ml10 swiper2">
+					<div class="lst_line swiper-wrapper">
+						<div class="swiper-slide"><a href="javascript:;">1</a></div>
+						<div class="swiper-slide"><a href="javascript:;">2</a></div>
+						<div class="swiper-slide"><a href="javascript:;">3</a></div>
+						<div class="swiper-slide"><a href="javascript:;">4</a></div>
+						<div class="swiper-slide"><a href="javascript:;">5</a></div>
+						<div class="swiper-slide"><a href="javascript:;">6</a></div>
+						<div class="swiper-slide"><a href="javascript:;">7</a></div>
+						<div class="swiper-slide"><a href="javascript:;">8</a></div>
+						<div class="swiper-slide current"><a href="javascript:;">9</a></div><!-- 현재 월에 current 추가 -->
+						<div class="swiper-slide"><a href="javascript:;">10</a></div>
+						<div class="swiper-slide"><a href="javascript:;">11</a></div>
+						<div class="swiper-slide"><a href="javascript:;">12</a></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk red"><span>검색</span></button>
+		</div>
+	</div>
+</div>
+
+
+<!-- 팝업 : 조회설정 -->
+<div id="popSetting" class="layerPopup ty2 pop_setting">
+	<div class="popup">
+		<div class="p_head">
+			<h2 class="tit">조회 설정</h2>
+			<button type="button" class="b-close btn_p_close"><span>닫기</span></button>
+		</div>
+
+		<div class="p_cont">
+			<p class="t1 pt10">거래내역</p>
+			<div class="lst_radiotx">
+				<label class="inp_radiotx"><input type="radio" name="rdo_orderby" value="desc" checked><span>최신순</span></label>
+				<label class="inp_radiotx"><input type="radio" name="rdo_orderby" value="amt" ><span>금액순</span></label>
+				<label class="inp_radiotx"><input type="radio" name="rdo_orderby" value="asc" ><span>과거순</span></label>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
+
+<!-- 팝업 : 판매금수정 -->
+<div id="incomemoneyedit" class="layerPopup ty2 pop_setting">
+	<div class="popup">
+
+		<div class="p_head">
+			<h2 class="tit mb12">판매금수정</h2>
+		</div>
+
+
+		<div class="p_cont4">
+			<p class="t2 mb12"><span class="mr4">수정할 금액을 입력해주세요.</span><p>
+
+			<section class="area_inp pr-mb1">
+
+			<div class="box">
+				<input type="text" id="incomemoney" class="inp_txt w100p" placeholder="수정할 금액을 입력하세요." value="123123"  placeholder="0" onkeyup="chkNumber(this)" >
+				<a onclick="reset(); return false;">
+				<button type="button" class="btn_file_del"><span>삭제</span></button>
+				</a>
+			</div>
+			</section>
+
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk red" ><span>수정</span></button>
+		</div>
+
+		</div>
+</div>
+
+<!-- 메인 js -->
+
+<script src="js/main.js"></script>
+
+
+<script>
+
+	const HOST = "http://203.248.18.198:8091";  
+	//const HOST = "http://localhost:8091"; 
+
+
+	var v_page_cnt = 99999;
+	var v_page_no = 1;
+	var tot_page = 1;
+	var v_orderby = "desc";
+	//var card_user_id = "k3950302135";
+	var v_user_id = "k8208601294004";
+	var dayCurIdx = 1;
+	var v_card_type = "";
+	var v_yyyymm = "2022-09";
+	var v_mm = "09";
+
+	var v_app_name ="";
+ 
+
+
+	$("#tab_all").on("click", function(){
+		v_app_name = ""; 
+		$(".top-tab-ul > li > a").removeClass("active"); 			
+		$(this).addClass("active");	
+		search_cnt();
+	});
+	 
+	$("#tab_store_assist").on("click", function(){
+		
+		v_app_name = "store_assist";
+		$(".top-tab-ul > li > a").removeClass("active"); 			
+		$(this).addClass("active");	
+		search_cnt();
+	});
+	$("#tab_baemin").on("click", function(){
+		v_app_name = "baemin";
+		$(".top-tab-ul > li > a").removeClass("active"); 			
+		$(this).addClass("active");	
+		search_cnt();
+	});
+	$("#tab_yogiyo").on("click", function(){
+		v_app_name = "yogiyo";
+		$(".top-tab-ul > li > a").removeClass("active"); 			
+		$(this).addClass("active");	
+		search_cnt();
+	});
+	$("#tab_coupang").on("click", function(){
+		v_app_name = "coupang";
+		$(".top-tab-ul > li > a").removeClass("active"); 			
+		$(this).addClass("active");	
+		search_cnt();
+	});
+	$("#tab_muk").on("click", function(){
+		v_app_name = "muk";
+		$(".top-tab-ul > li > a").removeClass("active"); 			
+		$(this).addClass("active");	
+		search_cnt();
+	});
+	$("#tab_spdv").on("click", function(){
+		v_app_name = "spdv";
+		$(".top-tab-ul > li > a").removeClass("active"); 			
+		$(this).addClass("active");	
+		search_cnt();
+	});
+
+
+
+
+
+
+	$("#btn_search_dt").on("click", function(){
+
+		var yyyyIndex = swiper2[0].realIndex;
+		var mmIndex = swiper2[1].realIndex;
+
+		var yyyy = 2021 + yyyyIndex;
+		var mm = 1 + mmIndex;
+
+
+		$("#sel_yyyymm").text(yyyy+"년 "+mm+"월");
+
+		if(mm<10) mm = "0"+mm;
+
+		v_mm = mm;
+
+		v_yyyymm = yyyy +"-"+ mm;
+
+
+		search_cnt();
+
+
+
+		if ($("#popYears").hasClass("ty2")){
+			$("#popYears").hide();
+		} else {
+			$("#popYears").hide(0, function(){
+				$(this).find(".popup").animate({bottom:'-100%'}, 100);
+			});
+		}
+
+		$("body").removeClass("popfix");
+		$(".popup_dim").remove(); 
+
+	});
+	 
+
+
+	$("#btn_search_set").on("click", function(){
+
+
+
+
+		if ($("#popSetting").hasClass("ty2")){
+			$("#popSetting").hide();
+		} else {
+			$("#popSetting").hide(0, function(){
+				$(this).find(".popup").animate({bottom:'-100%'}, 100);
+			});
+		}
+
+		$("body").removeClass("popfix");
+		$(".popup_dim").remove();
+
+		v_orderby = $("#rdo_orderby").val();
+
+
+		search_cnt();
+		//search();
+
+	});
+
+	$("#btn_refresh").click( function() {
+		search_cnt();
+		//search();
+	});
+	
+
+	//주문 매출 내역(웹크롤링하는 주문앱 (배달의민족,요기요,쿠팡이츠))
+	function prdView3(e){
+		var obj = $(e);
+		//debugger
+
+		$(".l_card").removeClass("active");
+		obj.parents(".l_card").addClass("active");
+
+		$("#pop_app_name").html(obj.attr("app_name"));
+		$("#pop_in_due_dt").html(obj.attr("in_due_dt2"));
+		$("#pop_amt").html(obj.attr("amt"));
+		$("#pop_amt2").html(obj.attr("amt"));
+		$("#pop_paid_amt").html(obj.attr("paid_amt")); 
+		$("#pop_menu").html(obj.attr("menu_main"));
+		$("#pop_store_nm").html(obj.attr("store_nm"));
+
+		
+
+
+		
+
+		openLayerPopup('crawling_popView'); return false;
+	}
+
+ 
+
+
+function search_cnt() {
+
+	//debugger
+
+
+
+	v_page_no = 1;
+	var v_dv_status = "";
+	var v_pack_type = "";
+
+	var v_dt_from ="2022-09-01";
+	var v_dt_to   ="2022-09-20";
+
+	v_dt_from = v_yyyymm+"-01";
+
+	if(v_mm == "02"){
+		v_dt_to   = v_yyyymm+"-28";
+	}
+	if(v_mm == "01" || v_mm == "03" || v_mm == "05" || v_mm == "07" || v_mm == "08"|| v_mm == "10"|| v_mm == "12"){
+
+		v_dt_to   = v_yyyymm+"-31";
+	}
+	if(v_mm == "04" || v_mm == "06" || v_mm == "09" || v_mm == "07"|| v_mm == "09" || v_mm == "11"){
+
+		v_dt_to   = v_yyyymm+"-30";
+	}
+
+
+
+	var v_search_keyword = ""; 
+	var v_price_type = "";
+
+
+	var cb_dtl_pruc_no = "";            
+	if($("input[name='rdo_pay_yn']:checked").val() == "N"){
+		cb_dtl_pruc_no = "Y";
+	}
+	var cb_dtl_pruc_ok = "";            
+	if($("input[name='rdo_pay_yn']:checked").val() == "Y"){
+		cb_dtl_pruc_ok = "Y";
+	} 
+
+	var rdo_card_type = "";      
+
+	var cb_dtl_card1  = "";    
+	if($("input[name='rdo_card_type']:checked").val() == "1"){
+		cb_dtl_card1 = "Y";
+	} 
+	var cb_dtl_card2 = "";            
+	if($("input[name='rdo_card_type']:checked").val() == "2"){
+		cb_dtl_card2 = "Y";
+	} 
+	v_orderby = $("input[name='rdo_orderby']:checked").val(); 
+
+
+	var dv_agent  = $("input[name='rdo_dv_agent']:checked").val(); 
+
+	var v_price_type  = $("input[name='rdo_price_type']:checked").val(); 
+	var v_memo = "";//$("#MEMO").val(); 
+	//v_memo = $("input[name='rdo_dv_agent']:checked").val(); 
+
+	var v_pay_status = ""; 
+
+
+	var v_data = "{v_shopId: '" + v_user_id 
+			+ "',v_dt_from:'" + v_dt_from 
+			+ "',v_dt_to:'" + v_dt_to 
+			+ "',v_page_cnt:'" + v_page_cnt 
+			+ "',v_page_no:'" + v_page_no 
+			+ "',v_pay_status:'" + v_pay_status 
+			+ "',v_app_name:'" + v_app_name 
+			+ "',v_memo:'" + v_memo +"'}";
+ 
+
+
+	//alert("조회 요청");
+	//run_waitMe($('#div_main'), 1, "roundBounce");
+	$.ajax({
+		type: "POST",
+		url: HOST + '/api/searchAppSalesHist_cnt',
+		data: v_data,
+		contentType: "application/json; charset=utf-8",
+		dataType: "json",
+		success: function (list) {
+			//debugger;                    
+			//alert("조회 성공");
+							
+			
+			$("#amt_total").html(list[0]["amt"].toLocaleString('ko-KR'));
+			$("#paid_amt_total").html(list[0]["paid_amt"].toLocaleString('ko-KR'));
+			$("#tot_cnt").html(list[0]["cnt"]).toLocaleString('ko-KR');
+			$("#tot_cnt2").html(list[0]["cnt"].toLocaleString('ko-KR'));
+
+ 
+			search();
+
+		},
+		error: function (xhr, status, error) {
+			//alert("조회 실패");
+			//debugger;
+			//$('#div_main').waitMe('hide');
+
+		}
+	});
+	}
+
+	
+
+	function search() {
+		//debugger;
+
+		// var id = $('#username').val();
+		// var pass = $('#password').val();
+
+		 
+		var v_dv_status = "";
+		var v_pack_type = "";
+
+		var v_dt_from ="2022-09-01";
+		var v_dt_to   ="2022-09-20";
+	v_dt_from = v_yyyymm+"-01";
+
+	if(v_mm == "02"){
+		v_dt_to   = v_yyyymm+"-28";
+	}
+	if(v_mm == "01" || v_mm == "03" || v_mm == "05" || v_mm == "07" || v_mm == "08"|| v_mm == "10"|| v_mm == "12"){
+
+		v_dt_to   = v_yyyymm+"-31";
+	}
+	if(v_mm == "04" || v_mm == "06" || v_mm == "09" || v_mm == "07"|| v_mm == "09" || v_mm == "11"){
+
+		v_dt_to   = v_yyyymm+"-30";
+	}
+
+
+		var v_search_keyword = ""; 
+		var v_pay_in_out = "";
+
+		var cb_dtl_pruc_no = "";            
+		if($("input[name='rdo_pay_yn']:checked").val() == "N"){
+			cb_dtl_pruc_no = "Y";
+		}
+		var cb_dtl_pruc_ok = "";            
+		if($("input[name='rdo_pay_yn']:checked").val() == "Y"){
+			cb_dtl_pruc_ok = "Y";
+		} 
+
+		var rdo_card_type = "";      
+
+		var cb_dtl_card1  = "";    
+		if($("input[name='rdo_card_type']:checked").val() == "1"){
+			cb_dtl_card1 = "Y";
+		} 
+		var cb_dtl_card2 = "";            
+		if($("input[name='rdo_card_type']:checked").val() == "2"){
+			cb_dtl_card2 = "Y";
+		} 
+		v_orderby = $("input[name='rdo_orderby']:checked").val(); 
+
+		var cbo_card_nm = "";
+
+
+		
+
+		var dv_agent  = $("input[name='rdo_dv_agent']:checked").val(); 
+
+		var v_price_type  = ""
+		var v_memo = "";//$("#MEMO").val(); 
+	var v_memo = "";//$("#MEMO").val(); 
+	//v_memo = $("input[name='rdo_dv_agent']:checked").val(); 
+
+	var v_pay_status = ""; 
+
+
+	
+
+	var v_data = "{v_shopId: '" + v_user_id 
+			+ "',v_dt_from:'" + v_dt_from 
+			+ "',v_dt_to:'" + v_dt_to 
+			+ "',v_page_cnt:'" + v_page_cnt 
+			+ "',v_page_no:'" + v_page_no 
+			+ "',v_orderby:'" + v_orderby 
+			+ "',v_pay_status:'" + v_pay_status 
+			+ "',v_app_name:'" + v_app_name 
+			+ "',v_memo:'" + v_memo +"'}";
+				  
+		$.ajax({
+			type: "POST",
+			url: HOST + '/api/searchAppSalesHist',
+			data: v_data,
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function (msg) {
+				//debugger;                    
+				//alert("조회 성공");
+				
+				myList = msg;       
+				var show_date = "";        
+				var show_date_pre = "";        
+				var temp_html = "";
+				$("#list_main").html("");                     
+				for (var i = 0; i < myList.length; i++) { 
+					
+					show_date = myList[i]["dt_md"];
+
+					if(show_date_pre != show_date){
+						temp_html = temp_html + ` <li>
+									<p class="t_day">`+myList[i]["dt_md"]+`</p>`;
+					}
+
+
+					var amt = parseInt(myList[i]["amt"]);
+					var paid_amt = parseInt(myList[i]["paid_amt"]);
+					
+					var pay_status = myList[i]["pay_status"];
+					var id_due_dt2 = myList[i]["in_due_dt2"];
+
+					if(id_due_dt2 == "") id_due_dt2 = "-";
+					var menu_main = myList[i]["menu_main"];
+
+					menu_main = menu_main.replace(/ /g, "&nbsp;");
+
+
+
+
+					
+					temp_html = temp_html + `<div class="l_card"><a href="javascript:;" onclick="prdView3(this);"
+													  app_name2=`+myList[i]["app_name2"]
+													+` in_due_dt2=`+id_due_dt2
+													+` amt=`+amt.toLocaleString('ko-KR')
+													+` paid_amt=`+paid_amt.toLocaleString('ko-KR') 
+													+` store_nm=딜리온`
+													+` menu_main=`+menu_main +`>			
+						<p class="t1">
+							<span class="lft fw600 c-black">`+myList[i]["app_name2"]+`</span>
+							<span class="rgh fw800 c-red">`+amt.toLocaleString('ko-KR')+`원</span>
+						</p>
+						<p class="t0">
+							<span class="lft"><span>입금예정일</span></span>
+							<span class="rgh">`+id_due_dt2+`</span>
+						</p>
+						<p class="t2">
+							<span class="lft"><span>정산금</span></span>
+							<span class="rgh c-black fw600">`+paid_amt.toLocaleString('ko-KR')+`원</span>
+							</span>
+						</p>
+					</a></div>`;
+
+
+ 
+					 
+ 
+					if(i== myList.length-1 || show_date != myList[i+1]["dt_md"] ){
+						temp_html = temp_html + '</li>';
+					}
+
+					show_date_pre = show_date;
+				}
+
+				
+				$("#list_main").append(temp_html);
+				 
+
+			},
+			error: function (xhr, status, error) {
+				//alert("조회 실패");
+				$('#div_main').waitMe('hide');
+				//debugger;
+
+			}
+		});
+	}
+
+
+
+
+
+search_cnt();
+
+</script>
+
+
+</div><!--  //wrap -->
+</body>
+</html>

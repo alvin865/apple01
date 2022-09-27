@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>관리페이지</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="Cache-Control" content="no-cache,no-store" />
+
+<meta name="writer" content="">
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="" />
+<meta name="format-detection" content="telephone=no" />
+
+<meta property="og:title" content=""/>
+<meta property="og:type" content=""/>
+<meta property="og:url" content=""/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content=""/>
+
+
+<!-- link -->
+<link href="css/swiper.min.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+<link href="css/added.css" rel="stylesheet">
+
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+
+
+<header id="header" class="header">
+	<div class="inr-c">
+		<a href="./income_inqury.html">
+		<button type="button" class="btn-back"><span>뒤로</span></button>
+		</a>
+		<h1 class="tit">관리</h1>
+	</div>
+</header>
+
+<div id="container" class="container main">
+
+
+
+	<!-- 상단 카드부분 -->
+	<div class="top_card">
+		<div class="inr-c">
+			<div class="top2">
+				<div class="pt10">주문 경로</div>
+				<div class="flex aic">
+				<div class="pt10 mr18">계정 연결</div>
+				<div class="pt10 mr20">매출 반영</div>
+				<div class="pt10 mr4">해지</div>
+				</div>
+			</div>
+		</div>
+	</div>
+			
+	<!-- 내역(영수증admin에 있는 주문경로 모두 불러와서 표시해야합니다.) -->
+	<div>
+		<div class="guanri_lst_card flex jcsb aic">
+			<div class="title_text">매장비서 </div>
+				<div class="rignt-area flex aic">
+						<a onclick="toastopen('popTost1');">
+						<span class="h1 mr20 c-green fw600">연결하기</span>
+						</a>
+						<div class="toggle-type-2 mr20">
+								<input type="checkbox" id="cb1">
+								<label for="cb1">
+										<span class="toggle-track"></span>
+								</label>
+						</div>
+						<div class="btns">
+							<button type="button" class="btn_del" onclick="openLayerPopup('disconnect');"><span class="ico_ i_del">삭제</span></button>
+						</div>
+				</div>
+		</div>
+		<div class="guanri_lst_card flex jcsb aic">
+			<div class="title_text">배달의민족 </div>
+				<div class="rignt-area flex aic">
+					<a onclick="openLayerPopup('baeminlogin'); return false;">
+					<span class="h1 mr20 c-green fw600">연결하기</span>
+					</a>
+					<div class="toggle-type-2 mr20">
+							<input type="checkbox" id="cb2">
+							<label for="cb2">
+									<span class="toggle-track"></span>
+							</label>
+					</div>
+					<div class="btns">
+						<button type="button" class="btn_del" onclick="openLayerPopup('disconnect');"><span class="ico_ i_del">삭제</span></button>
+					</div>
+				</div>
+		</div>
+		<div class="guanri_lst_card flex jcsb aic">
+			<div class="title_text">요기요 </div>
+				<div class="rignt-area flex aic">
+						<a onclick="openLayerPopup('yogiyologin');">
+						<span class="h1 mr20 c-green fw600">연결하기</span>
+						</a>
+						<div class="toggle-type-2 mr20">
+								<input type="checkbox" id="cb5">
+								<label for="cb5">
+										<span class="toggle-track"></span>
+								</label>
+						</div>
+						<div class="btns">
+							<button type="button" class="btn_del" onclick="openLayerPopup('disconnect');"><span class="ico_ i_del">삭제</span></button>
+						</div>
+				</div>
+		</div>
+		<div class="guanri_lst_card flex jcsb aic">
+			<div class="title_text">쿠팡이츠 </div>
+				<div class="rignt-area flex aic">
+						<a onclick="openLayerPopup('coupanglogin');">
+						<span class="h1 mr20 c-green fw600">연결하기</span>
+						</a>
+						<div class="toggle-type-2 mr20">
+								<input type="checkbox" id="cb3">
+								<label for="cb3">
+										<span class="toggle-track"></span>
+								</label>
+						</div>
+						<div class="btns">
+							<button type="button" class="btn_del" onclick="openLayerPopup('disconnect');"><span class="ico_ i_del">삭제</span></button>
+						</div>
+				</div>
+		</div>
+		<div class="guanri_lst_card flex jcsb aic">
+			<div class="title_text">먹깨비 </div>
+				<div class="rignt-area flex aic">
+						<a onclick="toastopen('popTost1');">
+						<span class="h1 mr20 c-green fw600">연결하기</span>
+						</a>
+						<div class="toggle-type-2 mr20">
+								<input type="checkbox" id="cb4">
+								<label for="cb4">
+										<span class="toggle-track"></span>
+								</label>
+						</div>
+						<div class="btns">
+							<button type="button" class="btn_del" onclick="openLayerPopup('disconnect');"><span class="ico_ i_del">삭제</span></button>
+						</div>
+				</div>
+		</div>
+
+		<div class="guanri_lst_card flex jcsb aic">
+			<div class="title_text">배달특급 </div>
+				<div class="rignt-area flex aic">
+						<span class="mr20">연결완료</span>
+						<div class="toggle-type-2 mr20">
+								<input type="checkbox" id="cb6">
+								<label for="cb6">
+										<span class="toggle-track"></span>
+								</label>
+						</div>
+						<div class="btns">
+							<button type="button" class="btn_del" onclick="openLayerPopup('disconnect');"><span class="ico_ i_del">삭제</span></button>
+						</div>
+				</div>
+		</div>
+	</div>
+
+</div><!--//container -->
+
+
+
+<!-- 팝업 : 조회설정 -->
+<div id="popSetting" class="layerPopup ty2 pop_setting">
+	<div class="popup">
+		
+		<div class="p_head">
+			<h2 class="tit">조회 설정</h2>
+			<button type="button" class="b-close btn_p_close"><span>닫기</span></button>
+		</div>
+
+		<div class="p_cont">
+			<p class="t1 pt10">결제수단</p>
+			<div class="lst_radiotx">
+				<label class="inp_radiotx"><input type="radio" name="radio01" checked><span>전체</span></label>
+				<label class="inp_radiotx"><input type="radio" name="radio01" ><span>카드</span></label>
+				<label class="inp_radiotx"><input type="radio" name="radio01" ><span>현금</span></label>
+				<label class="inp_radiotx"><input type="radio" name="radio01" ><span>선결제</span></label>
+			</div>
+		</div>
+
+		<div class="p_cont">
+			<p class="t1 pt10">배달대행</p>
+			<div class="lst_radiotx">
+				<label class="inp_radiotx"><input type="radio" name="radio02" checked><span>전체</span></label>
+				<label class="inp_radiotx"><input type="radio" name="radio02" ><span>생각대로</span></label>
+				<label class="inp_radiotx"><input type="radio" name="radio02" ><span>바로고</span></label>
+				<label class="inp_radiotx"><input type="radio" name="radio02" ><span>부릉</span></label>
+			</div>
+		</div>
+
+		<div class="p_cont">
+			<p class="t1 pt10">거래내역</p>
+			<div class="lst_radiotx">
+				<label class="inp_radiotx"><input type="radio" name="radio03" checked><span>최신순</span></label>
+				<label class="inp_radiotx"><input type="radio" name="radio03" ><span>금액순</span></label>
+				<label class="inp_radiotx"><input type="radio" name="radio03" ><span>과거순</span></label>
+			</div>
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk red"><span>검색</span></button>
+		</div>
+
+	</div>
+</div>
+<!-- 팝업 : 해제 -->
+<div id="disconnect" class="layerPopup ty2 pop_setting">
+	<div class="popup">	
+
+		<div class="p_head mt20">
+			<h2 class="tit mb12">연결해제 </h2>
+			<p>해제하시겠습니까?</p>
+			<span>해제시 언제든지 다시 등록이 가능합니다.</span>
+		</div>
+
+		<div class="mt12"></div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk gray b-close"><span>아니오</span></button>
+			<button type="button" class="btn-pk red "><span>해제</span></button>
+		</div>
+
+		</div>
+</div>
+
+<!-- 팝업 : 삭제2 -->
+<div id="delete2" class="layerPopup2 pop_alert">
+	<div class="popup">
+		<div class="p_cont2">
+			<p class="t2 mb12"><span class="c-red">삭제</span> 하시겠습니까?</p>
+			<span style="font-size: 13px; font-size: 3.611vw;">삭제시 해당내용을 복구하실 수 없습니다.</span>
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk gray b-close2"><span>아니오</span></button>
+			<button type="button" class="btn-pk red "><span>예</span></button>
+		</div>
+	</div>
+</div>
+
+
+<!-- 팝업 : 로그인 실패 -->
+<div id="failtologin" class="layerPopup2 pop_alert">
+	<div class="popup">
+		<div class="login_fail_img"><img src="../images/login_fail.svg"></div>
+		<div class="p_cont">
+			<p class="t1 mb20">로그인 실패</p>
+			<p class="tac mb5">연결하시려는 주문플랫폼의</p>
+			<p class="tac">계정을 확인해주세요!</p>
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk gray b-close2"><span>확인</span></button>
+		</div>
+	</div>
+</div>
+
+<!-- 팝업 : 배민로그인 -->
+<div id="baeminlogin" class="layerPopup ty2 pop_setting">
+	<div class="popup">
+
+		<div class="p_head mt20">
+			<h2 class="tit">배달의민족 계정연결</h2>
+		</div>
+
+		<div class="mt20"></div>
+
+		<div class="p_cont4">
+
+			<section class="area_inp">
+
+				<label for="input1" class="h1 mb20">매출집계를 위해 로그인이 필요합니다 :)</label>
+				<div class="box mb5">
+					<input type="text" id="input1" class="inp_txt w100p" placeholder="아이디를 입력하세요.">
+				</div>
+				<div class="box mb15">
+					<input type="password" id="input1-1" class="inp_txt w100p" placeholder="비밀번호를 입력하세요.">
+				</div>
+
+			</section>
+
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk red "><span>로그인</span></button>
+		</div>
+
+		</div>
+</div>
+<!-- 팝업 : 요기요로그인 -->
+<div id="yogiyologin" class="layerPopup ty2 pop_setting">
+	<div class="popup">
+
+		<div class="p_head mt20">
+			<h2 class="tit">요기요 계정연결</h2>
+		</div>
+
+		<div class="mt20"></div>
+
+		<div class="p_cont4">
+
+			<section class="area_inp">
+
+				<label for="input1" class="h1 mb20">매출집계를 위해 로그인이 필요합니다 :)</label>
+				<div class="box mb5">
+					<input type="text" id="input1" class="inp_txt w100p" placeholder="아이디를 입력하세요.">
+				</div>
+				<div class="box mb15">
+					<input type="password" id="input1-1" class="inp_txt w100p" placeholder="비밀번호를 입력하세요.">
+				</div>
+
+			</section>
+
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk red "><span>로그인</span></button>
+		</div>
+
+		</div>
+</div>
+<!-- 팝업 : 쿠팡이츠,로그인 -->
+<div id="coupanglogin" class="layerPopup ty2 pop_setting">
+	<div class="popup mt20">
+
+		<div class="p_head">
+			<h2 class="tit">쿠팡이츠 계정연결</h2>
+		</div>
+
+		<div class="mt20"></div>
+
+		<div class="p_cont4">
+
+			<section class="area_inp">
+
+				<label for="input1" class="h1 mb20">매출집계를 위해 로그인이 필요합니다 :)</label>
+				<div class="box mb5">
+					<input type="text" id="input1" class="inp_txt w100p" placeholder="아이디를 입력하세요.">
+				</div>
+				<div class="box mb15">
+					<input type="password" id="input1-1" class="inp_txt w100p" placeholder="비밀번호를 입력하세요.">
+				</div>
+
+			</section>
+
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk red "><span>로그인</span></button>
+		</div>
+
+		</div>
+</div>
+
+<!-- 팝업 : 토스트메세지 -->
+<div id="popTost1" class="layerPopup3 pop_tost">
+	<div class="popup">
+		<p><span class="ico2 i_chk1">연결이 완료되었습니다.</span></p>
+		<a class="b-close3"><span class="ico_close">닫기</span></a>
+	</div>
+</div>
+
+
+
+
+
+<!-- 메인 js -->
+<script src="js/main.js"></script>
+
+
+<script>
+	//심사제출하기
+	function toastopen(){
+		openLayerPopup3('popTost1');
+	
+		setTimeout(function(){
+			$("#popTost1").hide(function(){
+			});
+		},1000);
+	}
+</script>
+
+
+</div><!--  //wrap -->
+</body>
+</html>

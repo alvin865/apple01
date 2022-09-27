@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>오픈뱅킹</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="Cache-Control" content="no-cache,no-store" />
+
+<meta name="writer" content="">
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="" />
+<meta name="format-detection" content="telephone=no" />
+
+<meta property="og:title" content=""/>
+<meta property="og:type" content=""/>
+<meta property="og:url" content=""/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content=""/>
+
+
+<!-- link -->
+<link href="css/swiper.min.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+<link href="css/added.css" rel="stylesheet">
+
+
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+
+
+<header id="header" class="header">
+	<div class="inr-c">
+		<a href="">
+		<button type="button" class="btn-back"><span>뒤로</span></button>
+		</a>
+		<h1 class="tit">오픈뱅킹</h1>
+	</div>
+</header><!--//header -->
+
+<div id="container" class="container sub">
+	<div class="inr-c">
+		<section class="area_inp pr-mb1">
+			<div class="mt18"></div>
+			<h2 class="h_tit1">입금자(보내는사람)정보</h2>
+		
+			<label for="input1" class="h1">입금자명</label>
+			<div class="box mb15">
+				<input type="text" id="input1" class="inp_txt w100p" placeholder="입금자명을 입력해주세요.">
+			</div>
+
+
+			<label for="input2" class="h1">입금자 휴대폰번호</label>
+			<div class="box mb5">
+				<input type="number" id="input2" class="inp_txt w100p" placeholder="휴대폰번호 입력.">
+			</div>
+		</section>
+
+		<div class="mt40"></div>
+
+
+		<section class="area_inp pr-mb1">
+			<h2 class="h_tit1">수신자(받는사람) 정보</h2>
+		
+			<label for="input3" class="h1">예금주</label>
+			<div class="box mb15">
+				<input type="text" id="input3" class="inp_txt w100p" placeholder="예금주를 입력하세요.">
+			</div>
+
+
+			<label for="input4" class="h1">계좌정보</label>
+			<div class="box mb5">
+				<input type="text" id="input4" class="inp_txt w100p" placeholder="은행을 선택해주세요." readonly>
+				<button type="button" class="btn-pk" onclick="openLayerPopup('popBank'); return false;"><span>은행선택</span></button>
+			</div>
+			<div class="box mb10">
+				<input type="text" id="input4_1" class="inp_txt w100p" placeholder="계좌번호">
+				<button type="button" class="btn-pk" onclick="openLayerPopup2('popAlert1');"><span>계좌조회</span></button>
+			</div>
+			<p class="t_dot">[농협] 입금은행 선택시 농협중앙회 계좌는  NH농협은행, 단위농협 계좌는 지역농축협을 선택해주세요. 다르게 선택하실 경우 진행이 불가합니다.</p>
+			
+
+			<div class="mt24"></div>
+
+
+			<label for="input5" class="h1">입금금액</label>
+			<div class="box mb15">
+				<input type="number" id="input5" class="inp_txt w100p" placeholder="입금액을 입력하세요.">
+			</div>
+		
+		</section>
+
+		<div class="mt40"></div>
+
+			<label class="inp_checkbox">
+				<input type="checkbox">
+				<span class="f12">오픈뱅킹 신청을 위한<span class="c-red fz1 ml5 line"><a href="#" onclick="openLayerPopup('useok'); return false;" class="line c-red">개인정보 수집 및 이용</a></span><span class="ml5">내용을 확인 하였으며 이에 동의합니다.</span></span>
+			</label>
+
+
+
+		<div class="mt20"></div>
+		<div class="btn-bot mt10">
+			<button type="button" class="btn_submit" onclick="btnSubmit();">이체</button>
+		</div>
+
+
+</div><!--//container -->
+
+
+
+
+
+
+
+<!-- 팝업 : 은행선택 -->
+<div id="popBank" class="layerPopup ty2 pop_bank">
+	<div class="popup">
+		<div class="p_head">
+			<h2 class="tit">은행 선택</h2>
+			<button type="button" class="b-close btn_p_close"><span>닫기</span></button>
+		</div>
+
+		<div class="p_cont pt10 pb10">
+			<div class="lst_swiper ty2">
+				<div class="lst_text swiper-wrapper">
+					<div class="swiper-slide"><a href="javascript:;">저기은행</a></div>
+					<div class="swiper-slide"><a href="javascript:;">하나은행</a></div>
+					<div class="swiper-slide current"><a href="javascript:;">신한은행</a></div><!-- 현재 current 추가 -->
+					<div class="swiper-slide"><a href="javascript:;">국민은행</a></div>
+					<div class="swiper-slide"><a href="javascript:;">무슨은행</a></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk red"><span>확인</span></button>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- 팝업 : 계좌확인 -->
+<div id="popAlert1" class="layerPopup2 pop_alert">
+	<div class="popup">
+		<div class="p_cont">
+			<p class="t1"><span class="c-red">이형규</span>님의 계좌가 맞습니까?</p>
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk gray b-close2"><span>아니오</span></button>
+			<button type="button" class="btn-pk red b-close2"><span>예</span></button>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- 팝업 : 토스트메세지 -->
+<div id="popTost1" class="layerPopup3 pop_tost">
+	<div class="popup">
+		<p><span class="ico2 i_chk1">입금이 완료되었습니다.</span></p>
+		<a href="index.html" class="b-close3"><span class="ico_close">닫기</span></a>
+	</div>
+</div>
+
+
+<!-- 팝업 : 개인정보수집 및 이용동의 -->
+<div id="useok" class="layerPopup ty1 pop_addr">
+	<div class="popup">
+		<div class="p_head">
+			<h2 class="tit">개인정보수집 이용동의</h2>
+			<button type="button" class="b-close btn_p_close"><span>닫기</span></button>
+		</div>
+
+		<div class="p_cont">
+			<!-- 개인정보수집 및 이용동의 -->
+		</div>
+	</div>
+</div>
+
+<script>
+//심사제출하기
+function btnSubmit(){
+	openLayerPopup3('popTost1');
+
+	setTimeout(function(){
+		$("#popTost1").hide(function(){
+			window.location = "main으로";
+		});
+	},500);
+}
+</script>
+
+
+
+<!-- 서브 js -->
+<script src="js/main.js"></script>
+
+
+</div><!--  //wrap -->
+</body>
+</html>
