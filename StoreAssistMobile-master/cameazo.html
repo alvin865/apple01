@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>카드매출조회</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="Cache-Control" content="no-cache,no-store" />
+
+<meta name="writer" content="">
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="" />
+<meta name="format-detection" content="telephone=no" />
+
+<meta property="og:title" content=""/>
+<meta property="og:type" content=""/>
+<meta property="og:url" content=""/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content=""/>
+
+
+<!-- link -->
+<link href="css/swiper.min.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+<link href="css/added.css" rel="stylesheet">
+
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+
+
+<header id="header" class="header">
+	<div class="inr-c">
+		<button type="button" class="btn-back"><span>뒤로</span></button>
+		<h1 class="tit">카드매출 입금·조회</h1>
+	</div>
+</header><!--//header -->
+
+<div id="container" class="container main">
+
+	<!-- 상단 카드부분 -->
+	<div class="pt20 pb25" style="background-color:#FFF4FB;">
+		<div class="top_tit_calendar">
+			<div class="inr-c">
+				<div class="tit_yeas">
+					<button type="button" class="btn_yeas" onclick="openLayerPopup('popYears'); return false;"><span id="sel_yyyymm">2022년 9월</span></button>
+					<button type="button" class="btn_prev" onclick="downDate()" id="btn_prev"><span id="v_yyyymm">이전</span></button>
+					<button type="button" class="btn_next" onclick="upDate()" id="btn_next"><span id="v_yyyymm">다음</span></button>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="top_card">
+			<div class="inr-c">
+				<div class="box">
+					<div class="card_contents">
+						<div class="flex aic jcsb mb8">
+							<div class="textbox_mc"><span>승인 금액</span></div>
+							<div class="price_text_mc" value="" name="승인금액" id="purc_amt">391,000</div>
+						</div>
+					<div class="flex aic jcsb mb12">
+						<div class="textbox_bc"><span>입금 금액</span></div>
+							<div class="price_text_bc" value="" name="입금금액" id="pay_amt">391,000</div>
+					</div>
+					<div class="flex aic jcsb">
+						<span>총 건수</span>
+						<span  id="tot_cnt">31건</span>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+	
+
+	<!-- 내역 -->
+	<div class="tit_calendar">
+		<div class="inr-c">
+			<div class="txt_btn">
+				<button type="button" class="btn_tx" id="btn_refresh"><span class="ico_ i_refresh">총 <span class="c-red"  id="tot_cnt2">51</span>건</span></button>
+				<div class="rgh">
+					<button type="button" class="btn_tx" onclick="openLayerPopup('popSetting'); return false;"><span class="ico_ i_sort">전체·최신순</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="lst_card">
+		<ul id="list_main">
+			<li>
+				<p class="t_day">5월 15일</p>
+				<div class="l_card"><a href="javascript:;" onclick="prdView(this);"><!-- 선택시 active-->
+					
+					<p class="t0">
+						<span class="lft"><span class="c-black">01515050</span></span>
+						<span class="rgh">입금예정</span>
+					</p>
+					<p class="t1">
+						<span class="lft fw600 c-black">현대카드</span>
+						<span class="rgh fw800 c-red">522,400원</span>
+					</p>
+					<p class="t2">
+						<span class="lft"><span class="mr10">04.11</span>15:12</span></span>
+						<span class="rgh">체크 4021-****-****-2626
+						</span>
+					</p>
+				</a></div>
+				<div class="l_card"><a href="javascript:;" onclick="prdView(this);"><!-- 선택시 active-->
+					
+					<p class="t0">
+						<span class="lft"><span class="c-black">01515050</span></span>
+						<span class="rgh fw500 c-green">입금완료</span>
+					</p>
+					<p class="t1">
+						<span class="lft fw600 c-black">현대카드</span>
+						<span class="rgh fw800 c-black">522,400원</span>
+					</p>
+					<p class="t2">
+						<span class="lft"><span class="mr10">04.11</span>15:12</span></span>
+						<span class="rgh">체크 4021-****-****-2626
+						</span>
+					</p>
+				</a></div>
+				<div class="l_card"><a href="javascript:;" onclick="prdView(this);"><!-- 선택시 active-->
+					
+					<p class="t0">
+						<span class="lft"><span class="c-black">01515050</span></span>
+						<span class="rgh">입금예정</span>
+					</p>
+					<p class="t1">
+						<span class="lft fw600 c-black">현대카드</span>
+						<span class="rgh fw800 c-red">522,400원</span>
+					</p>
+					<p class="t2">
+						<span class="lft"><span class="mr10">04.11</span>15:12</span></span>
+						<span class="rgh">체크 4021-****-****-2626
+						</span>
+					</p>
+				</a></div>
+			</li>
+			<li>
+				<p class="t_day">5월 15일</p>
+				<div class="l_card"><a href="javascript:;" onclick="prdView(this);"><!-- 선택시 active-->
+					
+					<p class="t0">
+						<span class="lft"><span class="c-black">01515050</span></span>
+						<span class="rgh">입금예정</span>
+					</p>
+					<p class="t1">
+						<span class="lft fw600 c-black">현대카드</span>
+						<span class="rgh fw800 c-red">522,400원</span>
+					</p>
+					<p class="t2">
+						<span class="lft"><span class="mr10">04.11</span>15:12</span></span>
+						<span class="rgh">체크 4021-****-****-2626
+						</span>
+					</p>
+				</a></div>
+				<div class="l_card"><a href="javascript:;" onclick="prdView(this);"><!-- 선택시 active-->
+					
+					<p class="t0">
+						<span class="lft"><span class="c-black">01515050</span></span>
+						<span class="rgh">입금예정</span>
+					</p>
+					<p class="t1">
+						<span class="lft fw600 c-black">현대카드</span>
+						<span class="rgh fw800 c-red">522,400원</span>
+					</p>
+					<p class="t2">
+						<span class="lft"><span class="mr10">04.11</span>15:12</span></span>
+						<span class="rgh">체크 4021-****-****-2626
+						</span>
+					</p>
+				</a></div>
+				<div class="l_card"><a href="javascript:;" onclick="prdView(this);"><!-- 선택시 active-->
+					
+					<p class="t0">
+						<span class="lft"><span class="c-black">01515050</span></span>
+						<span class="rgh">입금예정</span>
+					</p>
+					<p class="t1">
+						<span class="lft fw600 c-black">현대카드</span>
+						<span class="rgh fw800 c-red">522,400원</span>
+					</p>
+					<p class="t2">
+						<span class="lft"><span class="mr10">04.11</span>15:12</span></span>
+						<span class="rgh">체크 4021-****-****-2626
+						</span>
+					</p>
+				</a></div>
+			</li>
+			<li>
+				<p class="t_day">5월 15일</p>
+				<div class="l_card"><a href="javascript:;" onclick="prdView(this);"><!-- 선택시 active-->
+					
+					<p class="t0">
+						<span class="lft"><span class="c-black">01515050</span></span>
+						<span class="rgh">입금예정</span>
+					</p>
+					<p class="t1">
+						<span class="lft fw600 c-black">현대카드</span>
+						<span class="rgh fw800 c-red">522,400원</span>
+					</p>
+					<p class="t2">
+						<span class="lft"><span class="mr10">04.11</span>15:12</span></span>
+						<span class="rgh">체크 4021-****-****-2626
+						</span>
+					</p>
+				</a></div>
+				<div class="l_card"><a href="javascript:;" onclick="prdView(this);"><!-- 선택시 active-->
+					
+					<p class="t0">
+						<span class="lft"><span class="c-black">01515050</span></span>
+						<span class="rgh">입금예정</span>
+					</p>
+					<p class="t1">
+						<span class="lft fw600 c-black">현대카드</span>
+						<span class="rgh fw800 c-red">522,400원</span>
+					</p>
+					<p class="t2">
+						<span class="lft"><span class="mr10">04.11</span>15:12</span></span>
+						<span class="rgh">체크 4021-****-****-2626
+						</span>
+					</p>
+				</a></div>
+				<div class="l_card"><a href="javascript:;" onclick="prdView(this);"><!-- 선택시 active-->
+					
+					<p class="t0">
+						<span class="lft"><span class="c-black">01515050</span></span>
+						<span class="rgh">입금예정</span>
+					</p>
+					<p class="t1">
+						<span class="lft fw600 c-black">현대카드</span>
+						<span class="rgh fw800 c-red">522,400원</span>
+					</p>
+					<p class="t2">
+						<span class="lft"><span class="mr10">04.11</span>15:12</span></span>
+						<span class="rgh">체크 4021-****-****-2626
+						</span>
+					</p>
+				</a></div>
+			</li>
+		</ul>
+	</div>
+</div><!--//container -->
+
+
+
+
+<!-- 팝업 : 상세내역 -->
+<div id="popView" class="layerPopup ty1 pop_view">
+	<div class="popup">
+		<div class="p_head">
+			<h2 class="tit">결제 상세내역</h2>
+			<button type="button" class="b-close btn_p_close"><span>닫기</span></button>
+		</div>
+
+		<div class="p_cont">
+			<h2 class="tit1">승인완료</h2>
+
+			<div class="card_ptop">
+				<div class="lft">
+					<p class="t1"><strong class="c-red" id="pop_purc_amt_title">51,000원</strong><!-- <strong class="c-black">51,000원</strong> --></p>
+					<p>현대카드</p>
+				</div>
+				<div class="rgh">
+					<p><span style="font-weight: 500;" id="pop_pay_yn">입금 예정</span></p><!-- <p class="c-green">입금완료</p> -->
+					<p>2022.04.02 15:25:30</p>
+				</div>
+			</div>
+			<div class="card_plist">
+				<ul>
+					<li>
+						<p><span>승인일자</span><span id="pop_tran_date">2022-08-05 15:25:20</span></p>
+						<p><span>입금일자</span><span id="pop_pay_date">2022-08-05 15:25:20</span></p>
+						<p><span>승인번호</span><span id="pop_appr_no">125126515</span></p>
+						<p><span>승인금액</span><span id="pop_purc_amt">57,500원</span></p>
+						<p><span>수수료</span><span id="pop_total_fees">51원</span></p>
+						<p><span>입금금액</span><span id="pop_pay_amt">56,949원</span></p>
+						<p><span>카드사</span><span id="pop_card_nm">현대카드</span></p>
+						<p><span>카드번호</span><span id="pop_card_no">9490-88***-****-12</span></p>
+						<p><span>카드종류</span><span id="pop_card_kind">신용</span></p>
+					</li>
+					<li>
+						<p><span>매장명</span><span id="pop_store_nm">#탕화쿵푸건대점</span></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- 팝업 : 년월선택 -->
+<div id="popYears" class="layerPopup ty2 pop_years">
+	<div class="popup">
+		<div class="p_head">
+			<h2 class="tit">조회기간 선택</h2>
+			<button type="button" class="b-close btn_p_close"><span>닫기</span></button>
+		</div>
+
+		<div class="p_cont  pt10 pb10">
+
+			<div class="d-flex">
+				<div class="lst_swiper swiper1" id="sel_yyyy">
+					<div class="lst_line swiper-wrapper">
+						<div class="swiper-slide" value="2021"><a href="javascript:;">2021</a></div>
+						<div class="swiper-slide current" value="2022"><a href="javascript:;">2022</a></div><!-- 현재 연도에 current 추가 -->
+						<div class="swiper-slide" value="2023"><a href="javascript:;">2023</a></div>
+					</div>
+				</div>
+
+				<div class="lst_swiper ml10 swiper2" id="sel_mm">
+					<div class="lst_line swiper-wrapper">
+						<div class="swiper-slide" value="01"><a href="javascript:;">1</a></div>
+						<div class="swiper-slide" value="02"><a href="javascript:;">2</a></div>
+						<div class="swiper-slide" value="03"><a href="javascript:;">3</a></div>
+						<div class="swiper-slide" value="04"><a href="javascript:;">4</a></div>
+						<div class="swiper-slide" value="05"><a href="javascript:;">5</a></div>
+						<div class="swiper-slide" value="06"><a href="javascript:;">6</a></div>
+						<div class="swiper-slide" value="07"><a href="javascript:;">7</a></div>
+						<div class="swiper-slide" value="08"><a href="javascript:;">8</a></div>
+						<div class="swiper-slide current" value="09"><a href="javascript:;">9</a></div><!-- 현재 월에 current 추가 -->
+						<div class="swiper-slide" value="10"><a href="javascript:;">10</a></div>
+						<div class="swiper-slide" value="11"><a href="javascript:;">11</a></div>
+						<div class="swiper-slide" value="12"><a href="javascript:;">12</a></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk red" id="btn_search_dt"><span>검색</span></button>
+		</div>
+	</div>
+</div>
+
+
+<!-- 팝업 : 조회설정 -->
+<div id="popSetting" class="layerPopup ty2 pop_setting">
+	<div class="popup">
+		<div class="p_head">
+			<h2 class="tit">조회 설정</h2>
+			<button type="button" class="b-close btn_p_close"><span>닫기</span></button>
+		</div>
+
+		<div class="p_cont">
+			<p class="t1 pt10">상세검색</p>
+			<div class="lst_radiotx">
+				<label class="inp_radiotx"><input type="radio" name="rdo_pay_yn" value="" checked><span>전체</span></label>
+				<label class="inp_radiotx"><input type="radio" name="rdo_pay_yn" value="Y" ><span>입금</span></label>
+				<label class="inp_radiotx"><input type="radio" name="rdo_pay_yn" value="N"><span>미입금</span></label>
+			</div>
+		</div>
+		<div class="p_cont">
+			<p class="t1 pt10">카드유형</p>
+			<div class="lst_radiotx">
+				<label class="inp_radiotx"><input type="radio" name="rdo_card_type" value="" checked><span>전체</span></label>
+				<label class="inp_radiotx"><input type="radio" name="rdo_card_type" value="1" ><span>신용</span></label>
+				<label class="inp_radiotx"><input type="radio" name="rdo_card_type" value="2"><span>체크</span></label>
+			</div>
+		</div>
+		<div class="p_cont">
+			<p class="t1 pt10">거래내역</p>
+			<div class="lst_radiotx">
+				<label class="inp_radiotx"><input type="radio" name="rdo_orderby" value="desc" checked><span>최신순</span></label>
+				<label class="inp_radiotx"><input type="radio" name="rdo_orderby" value="amt" ><span>금액순</span></label>
+				<label class="inp_radiotx"><input type="radio" name="rdo_orderby" value="asc" ><span>과거순</span></label>
+			</div>
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk red" id="btn_search_set"><span>검색</span></button>
+		</div>
+
+	</div>
+</div>
+
+
+<!-- 메인 js -->
+<script src="js/main.js"></script>
+
+<script>
+
+        const HOST = "http://203.248.18.198:8091";  
+        //const HOST = "http://localhost:8091"; 
+ 
+	
+		var v_page_cnt = 99999;
+        var v_page_no = 1;
+        var tot_page = 1;
+        var v_orderby = "desc";
+        //var card_user_id = "k3950302135";
+        var card_user_id = "k8208601294004";
+        var dayCurIdx = 1;
+        var v_card_type = "";
+		var v_yyyymm = "2022-09";
+		var v_mm = "";
+		var v_yyyy = ""
+
+
+		$("#btn_search_dt").on("click", function(){
+
+			var yyyyIndex = swiper2[0].realIndex;
+			var mmIndex = swiper2[1].realIndex;
+
+			var yyyy = 2021 + yyyyIndex;
+			var mm = 1 + mmIndex;
+
+
+			$("#sel_yyyymm").text(yyyy+"년 "+mm+"월");
+ 
+			if(mm<10) mm = "0"+mm;
+
+			v_mm = mm;
+
+			v_yyyymm = yyyy +"-"+ mm;
+
+ 
+            search_cnt();
+
+
+
+			if ($("#popYears").hasClass("ty2")){
+				$("#popYears").hide();
+			} else {
+				$("#popYears").hide(0, function(){
+					$(this).find(".popup").animate({bottom:'-100%'}, 100);
+				});
+			}
+
+			$("body").removeClass("popfix");
+			$(".popup_dim").remove(); 
+
+        });
+		 
+
+
+		$("#btn_search_set").on("click", function(){
+
+
+
+
+			if ($("#popSetting").hasClass("ty2")){
+				$("#popSetting").hide();
+			} else {
+				$("#popSetting").hide(0, function(){
+					$(this).find(".popup").animate({bottom:'-100%'}, 100);
+				});
+			}
+
+			$("body").removeClass("popfix");
+			$(".popup_dim").remove();
+
+			v_orderby = $("#rdo_orderby").val();
+
+
+            search_cnt();
+            //search();
+
+        });
+
+        $("#btn_refresh").click( function() {
+            search_cnt();
+            //search();
+        });
+        
+
+		//카드내역 상세
+function prdView(e){
+	var obj = $(e);
+	//debugger
+
+	$(".l_card").removeClass("active");
+	obj.parents(".l_card").addClass("active");
+
+	$("#pop_appr_no").html(obj.attr("appr_no"));
+	$("#pop_card_nm").html(obj.attr("card_nm"));
+	$("#pop_card_no").html(obj.attr("card_no"));
+	$("#pop_tran_date").html(obj.attr("tran_date"));
+	$("#pop_pay_date").html(obj.attr("pay_date")); 
+	$("#pop_card_kind").html(obj.attr("card_kind"));
+ 
+	$("#pop_purc_amt_title").html(obj.attr("purc_amt"));
+	$("#pop_purc_amt").html(obj.attr("purc_amt"));
+	$("#pop_total_fees").html(obj.attr("total_fees"));
+	$("#pop_pay_amt").html(obj.attr("pay_amt"));
+	$("#pop_pay_yn").html(obj.attr("pay_yn"));
+	$("#pop_store_nm").html(obj.attr("store_nm"));
+
+	
+
+	openLayerPopup('popView'); return false;
+}
+
+	
+	function search_cnt() {
+
+		//debugger
+
+
+
+		v_page_no = 1;
+		var v_dv_status = "";
+		var v_pack_type = "";
+
+		var v_dt_from ="2022-09-01";
+		var v_dt_to   ="2022-09-20";
+
+		v_dt_from = v_yyyymm+"-01";
+
+		if(v_mm == "02"){
+			v_dt_to   = v_yyyymm+"-28";
+		}
+		if(v_mm == "01" || v_mm == "03" || v_mm == "05" || v_mm == "07" || v_mm == "08"|| v_mm == "10"|| v_mm == "12"){
+
+			v_dt_to   = v_yyyymm+"-31";
+		}
+		if(v_mm == "04" || v_mm == "06" || v_mm == "09" || v_mm == "07"|| v_mm == "09" || v_mm == "11"){
+
+			v_dt_to   = v_yyyymm+"-30";
+		}
+
+
+
+		var v_search_keyword = ""; 
+		var v_price_type = "";
+
+
+		var cb_dtl_pruc_no = "";            
+		if($("input[name='rdo_pay_yn']:checked").val() == "N"){
+			cb_dtl_pruc_no = "Y";
+		}
+		var cb_dtl_pruc_ok = "";            
+		if($("input[name='rdo_pay_yn']:checked").val() == "Y"){
+			cb_dtl_pruc_ok = "Y";
+		} 
+
+		var rdo_card_type = "";      
+
+		var cb_dtl_card1  = "";    
+		if($("input[name='rdo_card_type']:checked").val() == "1"){
+			cb_dtl_card1 = "Y";
+		} 
+		var cb_dtl_card2 = "";            
+		if($("input[name='rdo_card_type']:checked").val() == "2"){
+			cb_dtl_card2 = "Y";
+		} 
+		v_orderby = $("input[name='rdo_orderby']:checked").val(); 
+
+		var cbo_card_nm = "";
+
+
+		var v_memo = "";//$("#MEMO").val(); 
+		var cbo_card_nm = "";
+
+
+		var v_memo = "";//$("#MEMO").val(); 
+
+
+		var v_data = "{card_user_id: '" + card_user_id 
+				+ "',v_dt_from:'" + v_dt_from 
+				+ "',v_dt_to:'" + v_dt_to 
+				+ "',v_page_cnt:'" + v_page_cnt 
+				+ "',v_page_no:'" + v_page_no 
+				+ "',v_price_type:'" + v_price_type 
+				+ "',cb_dtl_pruc_no:'" + cb_dtl_pruc_no 
+				+ "',cb_dtl_pruc_ok:'" + cb_dtl_pruc_ok 
+				+ "',cb_dtl_card1:'" + cb_dtl_card1 
+				+ "',cb_dtl_card2:'" + cb_dtl_card2 
+				+ "',cbo_card_nm:'" + cbo_card_nm 
+				+ "',v_memo:'" + v_memo +"'}";
+
+
+		//alert("조회 요청");
+		//run_waitMe($('#div_main'), 1, "roundBounce");
+		$.ajax({
+			type: "POST",
+			url: HOST + '/api/searchCardsales_info_cnt',
+			data: v_data,
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function (list) {
+				//debugger;                    
+				//alert("조회 성공");
+								
+				
+				
+				$("#purc_amt").html(list[0]["purc_amt"].toLocaleString('ko-KR'));
+				//$("#buy_amt").html(list[0]["buy_amt"].toLocaleString('ko-KR'));
+				$("#pay_amt").html(list[0]["pay_amt"].toLocaleString('ko-KR'));
+				$("#tot_cnt").html(list[0]["cnt"].toLocaleString('ko-KR')+"건");
+				$("#tot_cnt2").html(list[0]["cnt"].toLocaleString('ko-KR'));
+
+
+				tot_page = Math.ceil(list[0]["cnt"] / v_page_cnt);
+
+				$("#txt_page_at").val(v_page_no);
+				$("#txt_page_tot").html("of "+tot_page);
+				
+				//$('#div_main').waitMe('hide');
+				search();
+
+			},
+			error: function (xhr, status, error) {
+				//alert("조회 실패");
+				//debugger;
+				//$('#div_main').waitMe('hide');
+
+			}
+		});
+		}
+
+		
+
+        function search() {
+            //debugger;
+
+            // var id = $('#username').val();
+            // var pass = $('#password').val();
+
+             
+            var v_dv_status = "";
+            var v_pack_type = "";
+
+			var v_dt_from ="2022-09-01";
+			var v_dt_to   ="2022-09-20";
+		v_dt_from = v_yyyymm+"-01";
+
+		if(v_mm == "02"){
+			v_dt_to   = v_yyyymm+"-28";
+		}
+		if(v_mm == "01" || v_mm == "03" || v_mm == "05" || v_mm == "07" || v_mm == "08"|| v_mm == "10"|| v_mm == "12"){
+
+			v_dt_to   = v_yyyymm+"-31";
+		}
+		if(v_mm == "04" || v_mm == "06" || v_mm == "09" || v_mm == "07"|| v_mm == "09" || v_mm == "11"){
+
+			v_dt_to   = v_yyyymm+"-30";
+		}
+
+
+            var v_search_keyword = ""; 
+            var v_price_type = "";
+
+			var cb_dtl_pruc_no = "";            
+			if($("input[name='rdo_pay_yn']:checked").val() == "N"){
+				cb_dtl_pruc_no = "Y";
+			}
+			var cb_dtl_pruc_ok = "";            
+			if($("input[name='rdo_pay_yn']:checked").val() == "Y"){
+				cb_dtl_pruc_ok = "Y";
+			} 
+
+			var rdo_card_type = "";      
+
+			var cb_dtl_card1  = "";    
+			if($("input[name='rdo_card_type']:checked").val() == "1"){
+				cb_dtl_card1 = "Y";
+			} 
+			var cb_dtl_card2 = "";            
+			if($("input[name='rdo_card_type']:checked").val() == "2"){
+				cb_dtl_card2 = "Y";
+			} 
+			v_orderby = $("input[name='rdo_orderby']:checked").val(); 
+
+			var cbo_card_nm = "";
+
+
+			var v_memo = "";//$("#MEMO").val(); 
+
+            
+
+
+            var v_data = "{card_user_id: '" + card_user_id 
+                      + "',v_dt_from:'" + v_dt_from 
+                      + "',v_dt_to:'" + v_dt_to 
+                      + "',v_page_cnt:'" + v_page_cnt 
+                      + "',v_page_no:'" + v_page_no 
+                      + "',v_orderby:'" + v_orderby 
+                      + "',v_price_type:'" + v_price_type 
+                      + "',cb_dtl_pruc_no:'" + cb_dtl_pruc_no 
+                      + "',cb_dtl_pruc_ok:'" + cb_dtl_pruc_ok 
+                      + "',cb_dtl_card1:'" + cb_dtl_card1 
+                      + "',cb_dtl_card2:'" + cb_dtl_card2 
+                      + "',cbo_card_nm:'" + cbo_card_nm 
+                      + "',v_memo:'" + v_memo +"'}";
+ 
+					  
+            $.ajax({
+                type: "POST",
+                url: HOST + '/api/searchCardsales_info',
+                data: v_data,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg) {
+                    //debugger;                    
+                    //alert("조회 성공");
+                    
+                    myList = msg;       
+					var tran_date = "";        
+					var tran_date_pre = "";        
+					var temp_html = "";
+                    $("#list_main").html("");                     
+                    for (var i = 0; i < myList.length; i++) { 
+                        
+						tran_date = myList[i]["dt_md"];
+
+						if(tran_date_pre != tran_date){
+							temp_html = temp_html + ` <li>
+										<p class="t_day">`+myList[i]["dt_md"]+`</p>`;
+						}
+
+						
+
+
+						temp_html = temp_html + `<div class="l_card"><a href="javascript:;" onclick="prdView(this);" 
+							                    	tran_date=`+myList[i]["tran_date"]
+													+` tran_time=`+myList[i]["tran_time"]
+													+` purc_date=`+myList[i]["purc_date"]
+													+` appr_no=`+myList[i]["appr_no"]
+													+` purc_amt=`+parseInt(myList[i]["purc_amt"]).toLocaleString('ko-KR')
+													+` card_nm=`+myList[i]["card_nm"]
+													+` card_no=`+myList[i]["card_no"]
+													+` card_kind=`+myList[i]["card_kind"]
+													+` total_fees=`+parseInt(myList[i]["total_fees"]).toLocaleString('ko-KR')
+													+` pay_amt=`+parseInt(myList[i]["pay_amt"]).toLocaleString('ko-KR')
+													+` pay_date='`+myList[i]["pay_date"]+`'`
+													+` pay_yn=`+myList[i]["pay_yn"]
+													+` store_nm=`+myList[i]["store_nm"]
+													+`>					
+													<p class="t0">
+														<span class="lft"><span class="c-black">`+myList[i]["appr_no"]+`</span></span>
+														<span class="rgh">`+myList[i]["pay_yn"]+`</span>
+													</p>
+													<p class="t1">
+														<span class="lft fw600 c-black">`+myList[i]["card_nm"]+`</span>
+														<span class="rgh fw800 c-red">`+parseInt(myList[i]["purc_amt"]).toLocaleString('ko-KR')+`원</span>
+													</p>
+													<p class="t2">
+														<span class="lft"><span class="mr10">`+myList[i]["tran_date"]+`</span>`+myList[i]["tran_time"]+`</span></span>
+														<span class="rgh">`+myList[i]["card_kind"]+` `+myList[i]["card_no"]+`
+														</span>
+													</p>
+												</a></div>`;
+
+						if(i== myList.length-1 || tran_date != myList[i+1]["dt_md"] ){
+							temp_html = temp_html + '</li>';
+						}
+
+						tran_date_pre = tran_date;
+                    }
+
+                    
+					$("#list_main").append(temp_html);
+					 
+
+                },
+                error: function (xhr, status, error) {
+                    //alert("조회 실패");
+                    $('#div_main').waitMe('hide');
+                    //debugger;
+
+                }
+            });
+        }
+
+
+
+
+
+	search_cnt();
+
+</script>
+
+</div><!--  //wrap -->
+</body>
+</html>

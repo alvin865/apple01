@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>내 통장 거래내역</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="Cache-Control" content="no-cache,no-store" />
+
+<meta name="writer" content="">
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="" />
+<meta name="format-detection" content="telephone=no" />
+
+<meta property="og:title" content=""/>
+<meta property="og:type" content=""/>
+<meta property="og:url" content=""/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content=""/>
+
+
+<!-- link -->
+<link href="css/swiper.min.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+<link href="css/added.css" rel="stylesheet">
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/common.js"></script>
+
+
+</head>
+<body>
+<div id="wrap">
+
+
+<header id="header" class="header">
+	<div class="inr-c">
+		<button type="button" class="btn-back"><span>뒤로</span></button>
+		<h1 class="tit">내 통장 거래내역</h1>
+		<a href="my_tongjang_inqury_guanri.html" class="btn-gwanri" ><span>관리</span></a>
+	</div>
+</header><!--//header -->
+
+<div id="container" class="container main">
+
+	<!-- 상단 카드부분 -->
+	<div class="mt10"></div>
+	<div class="top_card">
+		<div class="inr-c wrap">
+			<div class="top-tab-menu">
+				<div>
+				<ul class="top-tab-ul">
+					<li><a href="#tab1" class="active">하나은행</a></li>
+					<li><a href="#tab2" class="">신한은행</a></li>
+					<li><a href="#tab3">우리은행</a></li>
+					<li><a href="#tab4">K bank</a></li>
+					<li><a href="#tab5">카카오뱅크</a></li>
+					<li><a href="#tab6">국민은행</a></li>
+					<li><a href="#tab7">그은행</a></li>
+					<li><a href="#tab7">그은ssssss행</a></li>
+				</ul>
+			</div>
+			</div>
+			<div class="btn_plus">
+			</div>
+		</div>
+	</div>
+
+	
+	<!-- 탭 내용 부분 -->
+	<ul class="tab-menu-box">
+		<li id="tab1">
+
+			<div class="my_tongjang_inqury pt20 pb25">
+				<div class="top_tit_calendar">
+					<div class="inr-c">
+						<div class="tit_yeas">
+							<button type="button" class="btn_yeas" onclick="openLayerPopup('popYears'); return false;"><span>2022년 9월</span></button>
+							<button type="button" class="btn_prev"><span>이전</span></button>
+							<button type="button" class="btn_next"><span>다음</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="inr-c">
+				<div class="box">
+				<div class="mainSwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<!-- 통장1 -->
+
+							<div class="card_contents">
+								<div class="flex aic jcsb">
+									<div class="reh">
+										<div class="mb5">사업자입출금통장</div>
+									<div class="price_text_mc  mb8" value="" name="승인금액">391,000원</div>
+									<div class="flex aic fs10 c-grbk300">
+										<span class="mr4">하나은행</span>
+										<span>32525-1515-125151</span>
+									</div>
+									</div>
+									<img class="img_bank" src="../images/7하나은행.svg"></i>
+								</div>
+							</div>
+
+						</div>
+						<div class="swiper-slide">
+							<!-- 통장2 -->
+							<div class="top_card">
+
+									<div class="card_contents">
+										<div class="flex aic jcsb">
+										<div class="reh">
+											<div class="mb5">사업자입출금통장</div>
+										<div class="price_text_mc  mb8" value="" name="승인금액">391,000원</div>
+										<div class="flex aic fs10 c-grbk300">
+											<span class="mr4">하나은행</span>
+											<span>32525-1515-125151</span>
+										</div>
+										</div>
+										<img class="img_bank" src="../images/1농협은행.svg"></i>
+	
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<!-- 통장3 -->
+							<div class="top_card">
+								<div class="card_contents">
+									<div class="flex aic jcsb">
+										<div class="reh">
+											<div class="mb5">사업자입출금통장</div>
+										<div class="price_text_mc  mb8" value="" name="승인금액">391,000원</div>
+										<div class="flex aic fs10 c-grbk300">
+											<span class="mr4">하나은행</span>
+											<span>32525-1515-125151</span>
+										</div>
+										</div>
+										<img class="img_bank" src="../images/49BNK투자.svg"></i>
+	
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+					
+				</div>
+				<div class="mb20"></div>
+				</div>
+
+				<div class="devide-line"></div>
+
+			</div>	
+			
+			<!-- 내역 -->
+			<div class="tit_calendar">
+				<div class="inr-c">
+					<div class="txt_btn">
+						<button type="button" class="btn_tx"><span class="ico_ i_refresh">총 <span class="c-red">51</span>건</span></button>
+						<div class="rgh">
+							<button type="button" class="btn_tx" onclick="openLayerPopup('popSetting'); return false;"><span class="ico_ i_sort">전체·최신순</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="lst_card">
+				<ul>
+					<li>
+						<p class="t_day">5월 15일</p>
+						<div class="l_card"><a href="javascript:;" onclick="prdView(this);"><!-- 선택시 active-->
+							<p class="t1">
+								<span class="lft fw600 c-black">이형규</span>
+								<span class="rgh fw800 c-red">6,500원</span>
+							</p>
+							<p class="t2">
+								<span class="lft"><span class="mr10">04.11</span>15:12</span></span>
+								<span class="rgh">125,000원
+								</span>
+							</p>
+						</a></div>
+						<div class="l_card"><a href="javascript:;" onclick=""><!-- 선택시 active-->
+							<p class="t1">
+								<span class="lft fw600 c-black">이형규</span>
+								<span class="rgh fw800 c-black">-6,500원</span>
+							</p>
+							<p class="t2">
+								<span class="lft"><span class="mr10">04.11</span>15:12</span></span>
+								<span class="rgh">125,000원
+								</span>
+							</p>
+						</a></div>
+					</li>
+				</ul>
+
+				<ul>
+					<li>
+						<p class="t_day">5월 15일</p>
+						<div class="l_card"><a href="javascript:;" onclick=""><!-- 선택시 active-->
+							<p class="t1">
+								<span class="lft fw600 c-black">이형규</span>
+								<span class="rgh fw800 c-red">6,500원</span>
+							</p>
+							<p class="t2">
+								<span class="lft"><span class="mr10">04.11</span>15:12</span></span>
+								<span class="rgh">125,000원
+								</span>
+							</p>
+						</a></div>
+						<div class="l_card"><a href="javascript:;" onclick=""><!-- 선택시 active-->
+							<p class="t1">
+								<span class="lft fw600 c-black">이형규</span>
+								<span class="rgh fw800 c-black">-6,500원</span>
+							</p>
+							<p class="t2">
+								<span class="lft"><span class="mr10">04.11</span>15:12</span></span>
+								<span class="rgh">125,000원
+								</span>
+							</p>
+						</a></div>
+					</li>
+				</ul>
+			</div>
+
+		</li>
+		<li id="tab2">
+		</li>
+	</ul>
+	<!--// 탭 내용 부분 -->
+
+
+</div><!--//container -->
+
+
+
+
+
+
+<!-- 팝업 : 상세내역 -->
+<div id="popView" class="layerPopup ty1 pop_view">
+	<div class="popup">
+		<div class="p_head">
+			<h2 class="tit">상세 거래내역</h2>
+			<button type="button" class="b-close btn_p_close"><span>닫기</span></button>
+		</div>
+
+		<div class="p_cont">
+			<div class="flex jcsb tat">
+			<h2 class="tit1">이형규</h2><!---매장비서,먹깨비,배달특급 등-->
+		</div>
+
+			<div class="card_ptop">
+				<div class="lft">
+					<p class="t1"><strong class="c-red">51,000원</strong><!-- <strong class="c-black">-51,000원</strong> --></p>
+				</div>
+				<div class="rgh">
+					<p><span style="font-weight: 500; color:#FF6093">입금</span></p><!-- <p class="c-black">출금</p> -->
+				</div>
+			</div>
+			<div class="card_plist">
+				<ul>
+					<li>
+						<p><span>거래일시</span><span>2022-08-05 15:25:20</span></p>
+						<p><span>메모</span><span class="textoverflow">치ddddddddddddddddddd킨맛집랭킹 1위 후라이드치킨1000</span></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- 팝업 : 삭제 -->
+<div id="delete" class="layerPopup2 pop_alert">
+	<div class="popup">
+		<div class="p_cont2">
+			<p class="t2 mb12"><span class="c-red">삭제</span> 하시겠습니까?</p>
+			<span style="font-size: 13px; font-size: 3.611vw;">삭제시 해당내용을 복구하실 수 없습니다.</span>
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk gray b-close2"><span>아니오</span></button>
+			<button type="button" class="btn-pk red "><span>예</span></button>
+		</div>
+	</div>
+</div>
+
+
+<!-- 팝업 : 년월선택 -->
+<div id="popYears" class="layerPopup ty2 pop_years">
+	<div class="popup">
+		<div class="p_head">
+			<h2 class="tit">조회기간 선택</h2>
+			<button type="button" class="b-close btn_p_close"><span>닫기</span></button>
+		</div>
+
+		<div class="p_cont  pt10 pb10">
+
+			<div class="d-flex">
+				<div class="lst_swiper swiper1">
+					<div class="lst_line swiper-wrapper">
+						<div class="swiper-slide"><a href="javascript:;">2021</a></div>
+						<div class="swiper-slide current"><a href="javascript:;">2022</a></div><!-- 현재 연도에 current 추가 -->
+						<div class="swiper-slide"><a href="javascript:;">2023</a></div>
+					</div>
+				</div>
+
+				<div class="lst_swiper ml10 swiper2">
+					<div class="lst_line swiper-wrapper">
+						<div class="swiper-slide"><a href="javascript:;">1</a></div>
+						<div class="swiper-slide"><a href="javascript:;">2</a></div>
+						<div class="swiper-slide"><a href="javascript:;">3</a></div>
+						<div class="swiper-slide"><a href="javascript:;">4</a></div>
+						<div class="swiper-slide"><a href="javascript:;">5</a></div>
+						<div class="swiper-slide"><a href="javascript:;">6</a></div>
+						<div class="swiper-slide"><a href="javascript:;">7</a></div>
+						<div class="swiper-slide"><a href="javascript:;">8</a></div>
+						<div class="swiper-slide current"><a href="javascript:;">9</a></div><!-- 현재 월에 current 추가 -->
+						<div class="swiper-slide"><a href="javascript:;">10</a></div>
+						<div class="swiper-slide"><a href="javascript:;">11</a></div>
+						<div class="swiper-slide"><a href="javascript:;">12</a></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk red"><span>검색</span></button>
+		</div>
+	</div>
+</div>
+
+
+<!-- 팝업 : 조회설정 -->
+<div id="popSetting" class="layerPopup ty2 pop_setting">
+	<div class="popup">
+		<div class="p_head">
+			<h2 class="tit">조회 설정</h2>
+			<button type="button" class="b-close btn_p_close"><span>닫기</span></button>
+		</div>
+
+		<div class="p_cont">
+			<p class="t1 pt10">거래내역</p>
+			<div class="lst_radiotx">
+				<label class="inp_radiotx"><input type="radio" name="radio03" checked><span>최신순</span></label>
+				<label class="inp_radiotx"><input type="radio" name="radio03" ><span>금액순</span></label>
+				<label class="inp_radiotx"><input type="radio" name="radio03" ><span>과거순</span></label>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
+
+
+<!-- 메인 js -->
+
+<script src="js/main.js"></script>
+
+
+
+</div><!--  //wrap -->
+</body>
+</html>

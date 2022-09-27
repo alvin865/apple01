@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>계좌관리</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="Cache-Control" content="no-cache,no-store" />
+
+<meta name="writer" content="">
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="" />
+<meta name="format-detection" content="telephone=no" />
+
+<meta property="og:title" content=""/>
+<meta property="og:type" content=""/>
+<meta property="og:url" content=""/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content=""/>
+
+
+<!-- link -->
+<link href="css/swiper.min.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+<link href="css/added.css" rel="stylesheet">
+
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+
+
+<header id="header" class="header">
+	<div class="inr-c">
+		<a href="./my_tongjang_inqury.html">
+		<button type="button" class="btn-back"><span>뒤로</span></button>
+		</a>
+		<h1 class="tit">계좌관리</h1>
+	</div>
+</header><!--//header -->
+
+<div id="container" class="container main">
+
+	<!-- 상단 카드부분 -->
+	<div class="top_card">
+		<div class="inr-c">
+			<div class="top3">
+				<div class="fw600 c-black mr4">연결계좌</div>
+				<div class="fw500 c-red">4</div>
+			</div>
+		</div>
+	</div>
+	
+			
+	<!-- 내역 -->
+	<div>
+
+	<a onclick="openLayerPopup('my_tongjang_inqury_guanri_popuppage'); return false;">
+	<div class="tongjang_lst_card">
+		<div class="flex aic mb12">
+			<img class="img_bank_sm mr6" src="../images/7하나은행.svg"></img>
+			<div class="fs15 fw500 c-black">하나은행</div>
+		</div>
+		<div class="flex jcsb aie">
+		<span>사업자입출금통장</span>
+		<div class="fs16 fw700 c-black"><span>526,000원</span></div>
+		</div>
+	</div>
+	</a>
+
+	<a onclick="openLayerPopup('my_tongjang_inqury_guanri_popuppage'); return false;">
+	<div class="tongjang_lst_card">
+		<div class="flex aic mb12">
+			<img class="img_bank_sm mr6" src="../images/49BNK투자.svg"></img>
+			<div class="fs15 fw500 c-black">BNK투자저축은행</div>
+		</div>
+		<div class="flex jcsb aie">
+		<span>사업자우대통장</span>
+		<div class="fs16 fw700 c-black"><span>526,000원</span></div>
+		</div>
+	</div>
+	</a>
+
+	<a onclick="openLayerPopup('my_tongjang_inqury_guanri_popuppage'); return false;">
+	<div class="tongjang_lst_card">
+		<div class="flex aic mb12">
+			<img class="img_bank_sm mr6" src="../images/31키움.svg"></img>
+			<div class="fs15 fw500 c-black">키움저축은행</div>
+		</div>
+		<div class="flex jcsb aie">
+		<span>사업자우대통장</span>
+		<div class="fs16 fw700 c-black"><span>526,000원</span></div>
+		</div>
+	</div>
+	</a>
+
+	</div>
+
+
+</div><!--//container -->
+
+
+<!-- 팝업 : 관리2 -->
+<div id="my_tongjang_inqury_guanri_popuppage" class="layerPopup ty1">
+	<div class="page">
+		<header id="header" class="header">
+			<div class="inr-c">
+				<button type="button" class="b-close btn-back"><span>뒤로</span></button>
+				<h1 class="tit">계좌관리</h1>
+			</div>
+		</header><!--//header -->
+		
+		<div id="container" class="container main">
+		
+			<!-- 상단 카드부분 -->
+			<div class="top_card">
+				<div class="inr-c">
+					<div class="top4">
+						<div class="mb12 fw800 c-black fs18">사업자입출금 통장</div>
+						<div class="fs11">하나은행 100-1245-2526262</div>
+					</div>
+				</div>
+			</div>
+			<div class="devide-line"></div>
+			
+					
+			<!-- 내역 -->
+			<div class="">
+		
+
+				<div class="tongjang_lst_1">
+					<span class="fs15 fw600 c-black">계좌별명</span>
+					<a onclick="openLayerPopup4('ChangeAccountName'); return false;" class="fs15"><span class="mr10">입출금 통장</span><span class="fw600 c-grbk300">></span></a>
+				</div>
+
+		
+
+				<div class="tongjang_lst_1">
+					<span class="fs15 fw600 c-black">주로 쓰는 계좌</span>
+					<a href="#" class="fs15" onclick="openLayerPopup1('jurouse_account'); return false;"><span class="mr10">설정하기</span><span class="fw600 c-grbk300">></span></a>
+				</div>
+
+		
+
+					<div class="tongjang_lst_2">
+						<div>
+						<p><span class="fs15 fw600 c-black">총 계좌 잔액에서 제외하기</span></p>
+						<span class="fs12 c-grbk300">제외하면 금액도 가려져요</span>
+						</div>
+						<div class="toggle-type-2">
+							<input type="checkbox" id="cb1">
+							<label for="cb1">
+									<span class="toggle-track"></span>
+							</label>
+						</div>
+					</div>
+
+		
+					<div class="tongjang_lst_2">
+						<div>
+						<p><span class="fs15 fw600 c-black">계좌 숨기기</span></p>
+						<span class="fs12 c-grbk300">목록에서 숨겨져요</span>
+						</div>
+						<div class="toggle-type-2">
+							<input type="checkbox" id="cb2">
+							<label for="cb2">
+									<span class="toggle-track"></span>
+							</label>
+						</div>
+					</div>
+
+		
+				<div class="mb10"></div>
+		
+				<div class="devide-line"></div>
+		
+				<div class="tongjang_lst_1">
+					<span class="fs10" style="border-bottom: 1px solid;" onclick="openLayerPopup1('dismiss'); return false;">연결 해제하기</span>
+				</div>	
+		
+		
+			</div>
+		
+		
+		</div><!--//container -->
+	</div>
+</div>
+
+<!-- 팝업 : 해제 -->
+<div class="popabovepop">
+<div id="dismiss" class="layerPopup ty2 pop_setting">
+	<div class="popup">	
+
+		<div class="p_head mt20">
+			<h2 class="tit mb12">연결해제 </h2>
+			<p>해제하시겠습니까?</p>
+			<span>해제시 언제든지 다시 등록이 가능합니다.</span>
+		</div>
+
+		<div class="mt12"></div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk gray b-close3"><span>아니오</span></button>
+			<button type="button" class="btn-pk red "><span>해제</span></button>
+		</div>
+
+		</div>
+</div>
+</div>
+
+
+
+
+<!-- 팝업 : 계좌별명변경 -->
+<div id="ChangeAccountName" class="layerPopup ty2 pop_setting">
+	<div class="popup">
+
+		<div class="p_head mt20">
+			<h2 class="tit  mb12">계좌명 변경</h2>
+		</div>
+
+
+
+		<div class="p_cont4">
+			<p class="t2 mb12"><span class="mr4">변경할 계좌명을 입력하세요.</span><p>
+
+			<section class="area_inp pr-mb1">
+
+			<div class="box mb15">
+				<input type="text" id="accountname" class="inp_txt w100p" placeholder="변경할 계좌명을 입력하세요." value="입출금통장">
+				<a onclick="reset(); return false;">
+				<button type="button" class="btn_file_del"><span>삭제</span></button>
+				</a>
+			</div>
+			</section>
+
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk red" ><span>수정</span></button>
+		</div>
+
+		</div>
+</div>
+
+
+<!-- 팝업 : 주로쓰는계좌 -->
+<div class="popabovepop">
+<div id="jurouse_account" class="layerPopup ty2 pop_setting">
+	<div class="popup">
+		<div class="p_head mt20">
+			<h2 class="tit mb12">주로 쓰는 계좌</h2>
+			<p>은행별 1개 계좌만 설정 할 수 있습니다</p>
+			<span>설정시, 은행 별 계좌 리스트 맨 앞에 표시됩니다.</span>
+		</div>
+
+		<div class="p_botm">
+			<button type="button" class="btn-pk gray b-close3"><span>취소</span></button>
+			<button type="button" class="btn-pk red"><span>설정</span></button>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+
+
+
+<!-- 메인 js -->
+<script src="js/main.js"></script>
+
+
+</div><!--  //wrap -->
+</body>
+</html>
